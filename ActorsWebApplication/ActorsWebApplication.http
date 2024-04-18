@@ -1,0 +1,50 @@
+@ActorsWebApplication_HostAddress = http://localhost:5090
+
+### Get all actors
+GET {{ActorsWebApplication_HostAddress}}/api/actors
+Accept: application/json
+
+###
+
+### Get actor by id
+GET {{ActorsWebApplication_HostAddress}}/api/actors/{id}
+Accept: application/json
+
+###
+
+### Add a new actor
+POST {{ActorsWebApplication_HostAddress}}/api/actors/{id}
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "Actor Name",
+  "rank": 1,
+  "source": "IMDB",
+  "details": "Actor details",
+  "type": "Actor"
+}
+
+###
+
+### Update an existing actor
+PUT {{ActorsWebApplication_HostAddress}}/api/actors/{id}
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "Updated Actor Name",
+  "rank": 1,
+  "source": "IMDB",
+  "details": "Updated actor details",
+  "type": "Actor"
+}
+
+###
+
+### Delete an actor
+DELETE {{ActorsWebApplication_HostAddress}}/api/actors/{id}
+Accept: application/json
+
+###
+
